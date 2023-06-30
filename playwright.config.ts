@@ -27,6 +27,7 @@ export default defineConfig({
     ['json', { outputFile: 'report.json' }]
   ],
   use: {
+    headless: true,
     baseURL: 'http://eaapp.somee.com',
     browserName: 'firefox',
     actionTimeout: 0,
@@ -40,7 +41,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {
-        headless: false,
+        headless: true,
         video: 'on',
         screenshot: 'only-on-failure',
         ...devices['Desktop Chrome'],
